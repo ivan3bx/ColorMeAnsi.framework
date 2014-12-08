@@ -10,6 +10,8 @@
 		2C1CE1BA1A3529C100B7A4AA /* ColorMeAnsi.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1CE1B91A3529C100B7A4AA /* ColorMeAnsi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C1CE1C01A3529C100B7A4AA /* ColorMeAnsi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1CE1B41A3529C100B7A4AA /* ColorMeAnsi.framework */; };
 		2C1CE1C71A3529C100B7A4AA /* ColorMeAnsiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CE1C61A3529C100B7A4AA /* ColorMeAnsiTests.swift */; };
+		2C1CE1D11A352B9300B7A4AA /* string_colorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CE1D01A352B9300B7A4AA /* string_colorize.swift */; };
+		2C1CE1D21A352B9300B7A4AA /* string_colorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CE1D01A352B9300B7A4AA /* string_colorize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 		2C1CE1BF1A3529C100B7A4AA /* ColorMeAnsiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorMeAnsiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C1CE1C51A3529C100B7A4AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C1CE1C61A3529C100B7A4AA /* ColorMeAnsiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMeAnsiTests.swift; sourceTree = "<group>"; };
+		2C1CE1D01A352B9300B7A4AA /* string_colorize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = string_colorize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,7 @@
 			children = (
 				2C1CE1B91A3529C100B7A4AA /* ColorMeAnsi.h */,
 				2C1CE1B71A3529C100B7A4AA /* Supporting Files */,
+				2C1CE1D01A352B9300B7A4AA /* string_colorize.swift */,
 			);
 			path = ColorMeAnsi;
 			sourceTree = "<group>";
@@ -209,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1CE1D11A352B9300B7A4AA /* string_colorize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C1CE1C71A3529C100B7A4AA /* ColorMeAnsiTests.swift in Sources */,
+				2C1CE1D21A352B9300B7A4AA /* string_colorize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +321,7 @@
 		2C1CE1CB1A3529C100B7A4AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -326,12 +333,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		2C1CE1CC1A3529C100B7A4AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
